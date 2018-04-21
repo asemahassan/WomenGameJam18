@@ -12,9 +12,10 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    public void LoadGame()
+	public void LoadGame(int scenenum)
     {
-        SceneManager.LoadScene(1); //remake   
+			Debug.Log("Scene loaded: " + sceneNum);
+			SceneManager.LoadScene(sceneNum);
     }
 
     void Update()
