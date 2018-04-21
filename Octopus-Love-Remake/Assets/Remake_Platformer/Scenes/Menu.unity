@@ -495,8 +495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -230}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: -250}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &509768300
 GameObject:
@@ -1252,7 +1252,7 @@ GameObject:
   - component: {fileID: 978566457}
   - component: {fileID: 978566456}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: waves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,8 +1273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.81, y: 57}
+  m_SizeDelta: {x: 50, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &978566456
 Animation:
@@ -1284,7 +1284,7 @@ Animation:
   m_GameObject: {fileID: 978566454}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 40a56a0e08b10e74dbfe26fec43eb7bc, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 40a56a0e08b10e74dbfe26fec43eb7bc, type: 2}
   m_WrapMode: 0
@@ -1898,7 +1898,7 @@ GameObject:
   - component: {fileID: 1933756779}
   - component: {fileID: 1933756778}
   m_Layer: 5
-  m_Name: Image
+  m_Name: oceanmg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1920,7 +1920,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 100.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1933756778
 MonoBehaviour:
