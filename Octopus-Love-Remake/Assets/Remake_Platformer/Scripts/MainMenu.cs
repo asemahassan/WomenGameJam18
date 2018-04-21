@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     }
 
-	public void LoadGame(int scenenum)
+	public void LoadGame(int sceneNum)
     {
 			Debug.Log("Scene loaded: " + sceneNum);
 			SceneManager.LoadScene(sceneNum);
