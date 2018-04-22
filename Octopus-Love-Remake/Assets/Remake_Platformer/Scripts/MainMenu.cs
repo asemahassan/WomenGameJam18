@@ -4,6 +4,7 @@ using System.Collections;
 
 public class MainMenu : MonoBehaviour
 {
+	private AudioSource click;
   
 
     // Use this for initialization
@@ -21,6 +22,11 @@ public class MainMenu : MonoBehaviour
 	public void QuitGame(){
 	
 		Application.Quit ();
+	}
+	public void Onclick()
+	{
+		if(click!=null)
+			click.Play();
 	}
 
 
