@@ -3,17 +3,26 @@ using System.Collections;
 
 public class SpawningCoin : MonoBehaviour
 {
-	public GameObject _platforms=null;
-	public GameObject _coins=null;
-	public void Spawn()
+	public GameObject[] _platforms = null;
+	public GameObject _coin = null;
+
+	private int coinCount = 10;
+
+	void Start ()
+	{
+		coinCount = Random.Range (1, coinCount);
+	}
+
+	public void Spawn ()
 	{
 		
-		_coins = GameObject.FindGameObjectsWithTag("coins");
+		_platforms = GameObject.FindGameObjectsWithTag ("Platforms");
 
 	
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < coinCount; i++) {
 			//instantiate method
-			GameObject spawnCoin = Instantiate (_coins, Vector3.zero, Quaternion.identity);
+			GameObject spawnCoin = Instantiate (_coin, Vector3.zero, Quaternion.identity);
+
 
 		}
 	}
