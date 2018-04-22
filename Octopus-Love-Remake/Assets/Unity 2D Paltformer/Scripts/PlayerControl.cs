@@ -25,7 +25,6 @@ public class PlayerControl : MonoBehaviour
 	public float tauntDelay = 1f;
 	// Delay for when the taunt should happen.
 
-
 	private int tauntIndex;
 	// The index of the taunts array indicating the most recent taunt.
 	private Transform groundCheck;
