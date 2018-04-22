@@ -8,15 +8,16 @@ public class MainMenu : MonoBehaviour
   
 
     // Use this for initialization
-    void Start()
+    IEnumerator wait()
     {
-
+		yield return new WaitForSeconds (1.0f);
     }
 
 	public void LoadGame(int sceneNum)
     {
-			Debug.Log("Scene loaded: " + sceneNum);
-			SceneManager.LoadScene(sceneNum);
+		StartCoroutine (wait());
+		Debug.Log("Scene loaded: " + sceneNum);
+		SceneManager.LoadScene(sceneNum);
     }
 
 	public void QuitGame(){
