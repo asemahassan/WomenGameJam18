@@ -55,6 +55,9 @@ TagManager:
   - name: Background
     uniqueID: 1535931219
     locked: 0
+  - name: Character
+    uniqueID: 276886943
+    locked: 0
   - name: Octopus
     uniqueID: 2511236001
     locked: 0
