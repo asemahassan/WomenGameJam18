@@ -5,12 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Remake_Platformer/Scenes/Menu.unity
     guid: 12f09ca73a63a491b85884b453247477
   - enabled: 1
-    path: Assets/Remake_Platformer/Scenes/Platformer.unity
-    guid: f5237ef07d2fb481eb7114efceb009cf
+    path: Assets/Remake_Platformer/Scenes/Story.unity
+    guid: 9ec37e1a2cab7394083e7ca307a4ecc1
+  - enabled: 1
+    path: Assets/Remake_Platformer/Scenes/Remake.unity
+    guid: d144eca96fcf849f48a4c472587d5c6d
