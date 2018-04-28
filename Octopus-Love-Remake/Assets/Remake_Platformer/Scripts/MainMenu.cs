@@ -7,32 +7,34 @@ public class MainMenu : MonoBehaviour
 	private AudioSource click;
   
 
-    // Use this for initialization
-    IEnumerator wait()
-    {
+	// Use this for initialization
+	IEnumerator wait ()
+	{
 		yield return new WaitForSeconds (1.0f);
-    }
+	}
 
-	public void LoadGame(int sceneNum)
-    {
-		StartCoroutine (wait());
-		Debug.Log("Scene loaded: " + sceneNum);
-		SceneManager.LoadScene(sceneNum);
-    }
+	public void LoadGame (int sceneNum)
+	{
+		StartCoroutine (wait ());
+		Debug.Log ("Scene loaded: " + sceneNum);
+		SceneManager.LoadScene (sceneNum);
+	}
 
-	public void QuitGame(){
+	public void QuitGame ()
+	{
 	
 		Application.Quit ();
 	}
-	public void Onclick()
+
+	public void Onclick ()
 	{
-		if(click!=null)
-			click.Play();
+		if (click != null)
+			click.Play ();
 	}
 
 
-    void Update()
-    {
-    }
+	void Update ()
+	{
+	}
 }
 
