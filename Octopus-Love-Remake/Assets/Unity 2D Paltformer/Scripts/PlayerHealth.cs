@@ -23,8 +23,9 @@ public class PlayerHealth : MonoBehaviour
 	private PlayerControl playerControl;
 	// Reference to the PlayerControl script.
 	private Animator anim;
-	// Reference to the Animator on the player
-
+    // Reference to the Animator on the player
+    [SerializeField]
+    private GameObject enemySplash = null;
 
 	void Awake ()
 	{
@@ -37,8 +38,18 @@ public class PlayerHealth : MonoBehaviour
 		healthScale = healthBar.transform.localScale;
 	}
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // If the colliding gameobject is an Enemy...
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Instantiate(enemySplash, collision.transform.position, collision.transform.rotation);
+            //destroy that enemy
+            Destroy(collision.gameObject);
+        }
+    }
 
-	void OnCollisionEnter2D (Collision2D col)
+    void OnCollisionEnter2D (Collision2D col)
 	{
 		// If the colliding gameobject is an Enemy...
 		if (col.gameObject.tag == "Enemy") {

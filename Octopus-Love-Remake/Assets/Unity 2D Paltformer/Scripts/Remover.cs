@@ -5,8 +5,6 @@ using System.Collections;
 public class Remover : MonoBehaviour
 {
 	public GameObject splash;
-
-
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		// If the player hits the trigger...
@@ -16,7 +14,7 @@ public class Remover : MonoBehaviour
 			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().enabled = false;
 
 			// .. stop the Health Bar following the player
-			if(GameObject.FindGameObjectWithTag("HealthBar").activeSelf)
+			if(GameObject.FindGameObjectWithTag("HealthBar")!=null && GameObject.FindGameObjectWithTag("HealthBar").activeSelf)
 			{
 				GameObject.FindGameObjectWithTag("HealthBar").SetActive(false);
 			}
@@ -28,14 +26,14 @@ public class Remover : MonoBehaviour
 			// ... reload the level.
 			StartCoroutine("ReloadGame");
 		}
-		else
-		{
-			// ... instantiate the splash where the enemy falls in.
-			Instantiate(splash, col.transform.position, transform.rotation);
+		//else
+		//{
+		//	// ... instantiate the splash where the enemy falls in.
+		//	Instantiate(splash, col.transform.position, transform.rotation);
 
-			// Destroy the enemy.
-			Destroy (col.gameObject);	
-		}
+		//	// Destroy the enemy.
+		//	Destroy (col.gameObject);	
+		//}
 	}
 
 	IEnumerator ReloadGame()

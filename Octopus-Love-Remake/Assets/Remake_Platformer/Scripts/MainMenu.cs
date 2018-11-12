@@ -6,7 +6,6 @@ public class MainMenu : MonoBehaviour
 {
 	private AudioSource click;
   
-
 	// Use this for initialization
 	IEnumerator wait ()
 	{
@@ -22,19 +21,17 @@ public class MainMenu : MonoBehaviour
 
 	public void QuitGame ()
 	{
-	
-		Application.Quit ();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit ();
+#endif
 	}
 
 	public void Onclick ()
 	{
 		if (click != null)
 			click.Play ();
-	}
-
-
-	void Update ()
-	{
 	}
 }
 
